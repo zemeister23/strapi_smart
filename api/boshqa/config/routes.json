@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/boshqas",
+      "handler": "boshqa.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/boshqas/count",
+      "handler": "boshqa.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/boshqas/:id",
+      "handler": "boshqa.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/boshqas",
+      "handler": "boshqa.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/boshqas/:id",
+      "handler": "boshqa.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/boshqas/:id",
+      "handler": "boshqa.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/parrandas",
+      "handler": "parranda.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/parrandas/count",
+      "handler": "parranda.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/parrandas/:id",
+      "handler": "parranda.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/parrandas",
+      "handler": "parranda.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/parrandas/:id",
+      "handler": "parranda.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/parrandas/:id",
+      "handler": "parranda.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

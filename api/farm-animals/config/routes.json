@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/farm-animals",
+      "handler": "farm-animals.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/farm-animals/count",
+      "handler": "farm-animals.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/farm-animals/:id",
+      "handler": "farm-animals.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/farm-animals",
+      "handler": "farm-animals.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/farm-animals/:id",
+      "handler": "farm-animals.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/farm-animals/:id",
+      "handler": "farm-animals.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

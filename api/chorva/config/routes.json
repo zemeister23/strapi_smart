@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/chorvas",
+      "handler": "chorva.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chorvas/count",
+      "handler": "chorva.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chorvas/:id",
+      "handler": "chorva.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chorvas",
+      "handler": "chorva.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/chorvas/:id",
+      "handler": "chorva.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/chorvas/:id",
+      "handler": "chorva.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

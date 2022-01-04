@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/baliqs",
+      "handler": "baliq.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/baliqs/count",
+      "handler": "baliq.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/baliqs/:id",
+      "handler": "baliq.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/baliqs",
+      "handler": "baliq.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/baliqs/:id",
+      "handler": "baliq.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/baliqs/:id",
+      "handler": "baliq.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

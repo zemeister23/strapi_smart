@@ -1,0 +1,93 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "phone": {
+      "type": "string"
+    },
+    "products": {
+      "via": "users",
+      "collection": "product",
+      "dominant": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "phone"
+    },
+    "balance": {
+      "type": "decimal",
+      "min": 0,
+      "max": 100000000,
+      "default": 0
+    },
+    "farms": {
+      "via": "users_permissions_users",
+      "collection": "category"
+    },
+    "notifications": {
+      "via": "users_permissions_users",
+      "collection": "notification"
+    },
+    "meal_bag": {
+      "type": "biginteger",
+      "default": "0"
+    }
+  }
+}

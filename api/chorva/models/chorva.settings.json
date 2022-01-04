@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chorvas",
+  "info": {
+    "name": "Chorva",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "products": {
+      "via": "chorvas",
+      "collection": "product",
+      "dominant": true
+    }
+  }
+}

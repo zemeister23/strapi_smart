@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "baliqs",
+  "info": {
+    "name": "Baliq",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "products": {
+      "via": "baliqs",
+      "collection": "product",
+      "dominant": true
+    }
+  }
+}

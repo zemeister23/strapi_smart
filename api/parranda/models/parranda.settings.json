@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parrandas",
+  "info": {
+    "name": "Parranda",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "products": {
+      "via": "parrandas",
+      "collection": "product",
+      "dominant": true
+    }
+  }
+}

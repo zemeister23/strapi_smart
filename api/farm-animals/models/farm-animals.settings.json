@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "farm_animals",
+  "info": {
+    "name": "FarmAnimals",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "farms": {
+      "via": "farm_animals",
+      "collection": "category"
+    },
+    "description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "readiness": {
+      "type": "integer",
+      "max": 100,
+      "min": 1
+    },
+    "count": {
+      "type": "integer",
+      "min": 1
+    },
+    "age": {
+      "type": "decimal"
+    }
+  }
+}

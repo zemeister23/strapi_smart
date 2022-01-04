@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/meashistories",
+      "handler": "meashistory.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/meashistories/count",
+      "handler": "meashistory.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/meashistories/:id",
+      "handler": "meashistory.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/meashistories",
+      "handler": "meashistory.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/meashistories/:id",
+      "handler": "meashistory.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/meashistories/:id",
+      "handler": "meashistory.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

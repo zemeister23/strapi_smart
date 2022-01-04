@@ -1,0 +1,103 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "float"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "categories": {
+      "via": "products",
+      "collection": "category"
+    },
+    "Custom_field": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.custom-field"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "published"
+      ],
+      "default": "published",
+      "required": true
+    },
+    "users": {
+      "via": "products",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "readiness": {
+      "type": "integer",
+      "min": 0,
+      "max": 100,
+      "default": 1
+    },
+    "count": {
+      "type": "integer"
+    },
+    "food_percent": {
+      "type": "integer",
+      "max": 100,
+      "min": 0
+    },
+    "chorvas": {
+      "via": "products",
+      "collection": "chorva"
+    },
+    "baliqs": {
+      "via": "products",
+      "collection": "baliq"
+    },
+    "boshqas": {
+      "via": "products",
+      "collection": "boshqa"
+    },
+    "parrandas": {
+      "via": "products",
+      "collection": "parranda"
+    },
+    "age": {
+      "type": "decimal",
+      "min": 0
+    },
+    "orders": {
+      "via": "products",
+      "collection": "order"
+    }
+  }
+}

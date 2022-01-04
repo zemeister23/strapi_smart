@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boshqas",
+  "info": {
+    "name": "Boshqa",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "products": {
+      "via": "boshqas",
+      "collection": "product",
+      "dominant": true
+    }
+  }
+}

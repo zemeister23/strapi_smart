@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "count": {
+      "type": "integer"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "total_amount": {
+      "type": "string"
+    },
+    "products": {
+      "collection": "product",
+      "via": "orders",
+      "dominant": true
+    },
+    "meal_url": {
+      "type": "string"
+    },
+    "meal_name": {
+      "type": "string"
+    },
+    "meashistories": {
+      "via": "orders",
+      "collection": "meashistory"
+    },
+    "food_percent_order": {
+      "type": "integer",
+      "default": 0
+    },
+    "isReady": {
+      "type": "enumeration",
+      "enum": [
+        "Tayyorlanmoqda",
+        "Keltirildi",
+        "Olindi"
+      ],
+      "default": "Tayyorlanmoqda"
+    }
+  }
+}

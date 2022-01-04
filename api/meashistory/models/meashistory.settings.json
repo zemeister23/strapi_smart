@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "meashistories",
+  "info": {
+    "name": "mealshistory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "meal": {
+      "type": "enumeration",
+      "enum": [
+        "Makkajoxori",
+        "Somon",
+        "Dori"
+      ]
+    },
+    "price": {
+      "type": "string"
+    },
+    "mass": {
+      "type": "string"
+    },
+    "orders": {
+      "via": "meashistories",
+      "collection": "order",
+      "dominant": true
+    }
+  }
+}
